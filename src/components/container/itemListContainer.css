@@ -3,3 +3,10 @@ h1 {
   color: blueviolet;
   margin-top: 20px;
 }
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+}
