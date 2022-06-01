@@ -1,1 +1,11 @@
 
+.product-description{
+    background-color: rgb(148, 147, 146);
+    border: 1px solid #126d67;
+}
+.product-price{
+    background-color: #3761af;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
