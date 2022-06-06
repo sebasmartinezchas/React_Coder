@@ -43,3 +43,11 @@ export const getProductsAsync = () => {
     }, 2000);
   });
 };
+
+export const getProductsAsyncById = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(productList.find(product=>product.id===id));
+    }, 2000);
+  });
+};
