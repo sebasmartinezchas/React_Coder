@@ -6,20 +6,20 @@ import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState();
-  const params = useParams()
+  const { productId } = useParams();
 
-  console.log(params)
+  // console.log(params)
   useEffect(() => {
-    getProductsAsyncById(params.productId).then(response => {
-        setProduct(response)
-        
-    })
-}, [])
+    getProductsAsyncById(productId).then((response )=> {
+      setProduct(response);
+    });
+  }, []);
+  console.log(product)
 
   return (
     <>
       <h1>Detalle del producto</h1>
-      <ItemDetail {...product}/>
+      <ItemDetail {...product} />
     </>
   );
 };

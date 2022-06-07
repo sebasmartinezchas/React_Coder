@@ -1,6 +1,6 @@
 const productList = [
   {
-    id: 1,
+    id: "1",
     name: "Campera Adidas",
     price: 9999,
     category: "Hombre",
@@ -9,7 +9,7 @@ const productList = [
     description: "Campera deportiva Tiro X Lego",
   },
   {
-    id: 2,
+    id: "2",
     name: "Zapatillas Forum",
     price: 25999,
     category: "Mujer",
@@ -18,7 +18,7 @@ const productList = [
     description: "Zapatillas Forum Bold",
   },
   {
-    id: 3,
+    id: "3",
     name: "Conjunto de Buzo para Niño",
     price: 9999,
     category: "Niños",
@@ -27,7 +27,7 @@ const productList = [
     description: "Conjunto Buzo Cuello Redondo",
   },
   {
-    id: 4,
+    id: "4",
     name: "Buzo con capucha River Plate",
     price: 13999,
     category: "Hombre",
