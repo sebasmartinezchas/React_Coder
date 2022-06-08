@@ -2,7 +2,7 @@ import React from "react";
 import navbar from "../NavBar/navbar.css";
 import logo from "../NavBar/logo.png";
 import CartWidgets from "./CartWidgets";
-import { Link,NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -15,18 +15,27 @@ const NavBar = () => {
           </NavLink>
         </div>
         <div>
-          <NavLink to="/category/hombre" className={({isActive})=>isActive?'select':'unselect'}>
+          <NavLink
+            to="/category/hombre"
+            className={({ isActive }) => (isActive ? "select" : "unselect")}
+          >
             Hombre
           </NavLink>
         </div>
         <div>
-          <NavLink to="/category/mujer" className={({isActive})=>isActive?'select':'unselect'}>
+          <NavLink
+            to="/category/mujer"
+            className={({ isActive }) => (isActive ? "select" : "unselect")}
+          >
             Mujer
           </NavLink>
         </div>
         <div>
-          <NavLink to="/category/niños" className={({isActive})=>isActive?'select':'unselect'}>
-            Niños
+          <NavLink
+            to="/category/chicos"
+            className={({ isActive }) => (isActive ? "select" : "unselect")}
+          >
+            Chicos
           </NavLink>
         </div>
 

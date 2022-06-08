@@ -19,9 +19,9 @@ const productList = [
   },
   {
     id: "3",
-    name: "Conjunto de Buzo para Niño",
+    name: "Conjunto de Buzo para Chicos",
     price: 9999,
-    category: "niños",
+    category: "chicos",
     img:'/images/conjunto_buzo_niño.png',
     stock: 20,
     description: "Conjunto Buzo Cuello Redondo",
