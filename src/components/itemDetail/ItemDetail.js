@@ -2,15 +2,16 @@ import React from 'react'
 
 
 
-const ItemDetail = ({id, name,description2,img}) => {
+const ItemDetail = ({id, name,description2,img,description,price,priceStr}) => {
   return (
     <>
-        <h2>Card de detalle</h2>
+        <h1>{name}</h1>
+        <div><img src={img} alt={name}/></div>
+        <h2>{description}</h2>
+        <h3>{description2}</h3>
+        <h4>{priceStr}{price}</h4>
       
-       {name}
-       {id}
-<img src={img} alt={name}/>
-{description2}
+    
         
     </>
   )

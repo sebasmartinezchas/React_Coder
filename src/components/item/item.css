@@ -2,10 +2,24 @@
 .product-description{
     background-color: rgb(148, 147, 146);
     border: 1px solid #126d67;
+    margin-bottom: 0.5rem
+    ;
 }
 .product-price{
     background-color: #3761af;
     color: #fff;
     font-weight: 700;
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.product_detail{
+    background-color: #5880ee;
+    padding: 1rem 0.5rem;
+ 
+  
+}
+.link_detail{
+    text-decoration: none;
+    color: white;
+  font-size: 1.2rem;
 }
