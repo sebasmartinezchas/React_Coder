@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
 
 * {
   margin: 0;
@@ -14,30 +14,15 @@
   color: white;
   gap: 5rem;
 }
-.category {
-  padding-top: 4rem;
-  color: aliceblue;
-  display: flex;
-  text-decoration: none;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-.category .active{
-  padding-top: 4rem;
-  color: aliceblue;
-  background-color: rgb(37, 37, 37);
-  display: flex;
-  text-decoration: none;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
+
 .detail {
   color: white;
 }
 .logo {
   margin-top: 2rem;
+
 }
-.title {
+.logo .title {
   font-size: 3rem;
   text-decoration: none;
   color: white;
@@ -61,12 +46,16 @@
   margin-bottom: 2rem;
 }
 .select{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  color: aliceblue;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 2rem;
+  color: white;
   display: flex;
   text-decoration: none;
   font-size: 2rem;
   margin-bottom: 2rem;
-  background-color: blueviolet;
+  background-color: rgb(95, 54, 133);
+  border-radius: 15px;
 }

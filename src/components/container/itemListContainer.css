@@ -7,9 +7,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 4rem;
-  justify-content: space-around;
-  margin-right: 3rem;
+  margin: 4rem;
+  justify-content: space-between;
+  padding: 0;
+ 
 }
 .card-container img{
   border-radius: 5px;
