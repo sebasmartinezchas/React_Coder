@@ -1,6 +1,6 @@
 import React from "react";
 import "../item/item.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Item = ({ description, name, img, price, id,priceStr }) => {
   return (
@@ -11,7 +11,7 @@ const Item = ({ description, name, img, price, id,priceStr }) => {
 
         <p className="product-price">{priceStr}{price}</p>
 
-        <Link to={`/detail/${id}`} className='link_detail' ><h3 className='product_detail'>Ver detalle</h3></Link>
+        <NavLink to={`/detail/${id}`} className='link_detail' ><h3 className='product_detail'>Ver detalle</h3></NavLink>
       </div>
     </div>
   );

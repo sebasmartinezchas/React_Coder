@@ -2,8 +2,9 @@
 .product-description{
     background-color: rgb(148, 147, 146);
     border: 1px solid #126d67;
-    margin-bottom: 0.5rem
-    ;
+    margin-bottom: 0.5rem;
+    border-radius:5px;
+    
 }
 .product-price{
     background-color: #3761af;
@@ -11,10 +12,12 @@
     font-weight: 700;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    border-radius:5px;
 }
 .product_detail{
     background-color: #5880ee;
     padding: 1rem 0.5rem;
+    border-radius:5px;
  
   
 }

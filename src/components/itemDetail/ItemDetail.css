@@ -1,6 +1,29 @@
 .image-detail{
-    min-height: 600px;
-    min-width:600px;
+    height:100%;
+    width:50vh;
     border-radius: 15px;
     
+}
+.product-detail{
+    width: 100%;
+}
+.product-price {
+    background-color: #3761af;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+ 
+ 
+}
+.description{
+    font-style: italic;
+   justify-content: center;
+   font-size: 1.2rem;
+   font-weight: 600;
+   display: inline-block;
+   margin: 1rem;
+   justify-content: center;
+  
 }

@@ -8,7 +8,8 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin: 4rem;
-  justify-content: space-between;
+  justify-content:center;
+  align-items: center;
   padding: 0;
  
 }
