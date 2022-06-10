@@ -3,7 +3,7 @@ const productList = [
     id: "1",
     name: "Campera Adidas",
     priceStr:'Precio:$ ',
-    price: '9999',
+    price: 9999,
     category: "hombre",
     img: "/images/campera_hombre_deportiva.png",
     stock: 15,
@@ -15,7 +15,7 @@ const productList = [
     id: "2",
     name: "Zapatillas Forum",
     priceStr:'Precio:$ ',
-    price: '25999',
+    price: 25999,
     category: "mujer",
     img: "/images/zapatillas_forum_bold.jpg",
     stock: 10,
@@ -27,7 +27,7 @@ const productList = [
     id: "3",
     name: "Conjunto de Buzo para Niño",
     priceStr:'Precio:$ ',
-    price: '9999',
+    price: 9999,
     category: "chicos",
     img: "/images/conjunto_buzo_niño.png",
     stock: 20,
@@ -39,7 +39,7 @@ const productList = [
     id: "4",
     name: "Buzo con capucha River Plate",
     priceStr:'Precio:$ ',
-    price: '13999',
+    price: 13999,
     category: "hombre",
     img: "/images/buzo_River.png",
     stock: 38,
@@ -51,7 +51,7 @@ const productList = [
     id: "5",
     name: "Remera Frozen 2",
     priceStr:'Precio:$ ',
-    price: '4999',
+    price: 4999,
     category: "chicos",
     img: "/images/remera_frozen.png",
     stock: 18,
@@ -63,7 +63,7 @@ const productList = [
     id: "6",
     name: "Botines Predator Edge.3",
     priceStr:'Precio:$ ',
-    price: '18999',
+    price: 18999,
     category: "hombre",
     img: "/images/botines_predator.png",
     stock: 8,
@@ -75,7 +75,7 @@ const productList = [
     id: "7",
     name: "Calzas Running Essentials",
     priceStr:'Precio:$ ',
-    price: '9499',
+    price: 9499,
     category: "mujer",
     img: "/images/calzas_running.png",
     stock: 28,
@@ -87,7 +87,7 @@ const productList = [
     id: "8",
     name: "Buzo con capucha Essentials",
     priceStr:'Precio:$ ',
-    price: '12999',
+    price: 12999,
     category: "mujer",
     img: "/images/buzo_mujer_essentials.png",
     stock: 11,
@@ -114,6 +114,6 @@ export const getProductsAsyncById = (id) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(productList.find((product) => product.id === id));
-    }, 2000);
+    }, 500);
   });
 };

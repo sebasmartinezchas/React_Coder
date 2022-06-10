@@ -9,9 +9,11 @@ _react-router-dom en su versión 6.3.0 para lograr una navegación amigable en l
 _Material Icon: Para incorporar íconos.
 
 ### Instalación y utilización de la aplicación
-_Debe seguir los siguientes pasos:
+_Debe seguir los siguientes pasos
 1)Clonar el proyecto en su PC.
 
 2)Inicializarlo con npm install en la consola de su preferencia.
 
 3)Abrirlo con el comando npm start que abrirá el proyecto en su puerto local Nº3000 y de esta manera podrá visualizarlo en su navegador.
+
+![](src%5CAdidasStore.gif)
