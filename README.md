@@ -4,8 +4,10 @@ Creado con la aplicación create-react-app como proyecto práctico del curso de 
 
 ## Librerías, dependencias y/o frameworks utlizados
 
-Se han utilizado las siguientes herramientas:
+
+### Se han utilizado las siguientes herramientas:
 _react-router-dom en su versión 6.3.0 para lograr una navegación amigable en la publicación.
+
 _Material Icon: Para incorporar íconos.
 
 ### Instalación y utilización de la aplicación
