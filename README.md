@@ -16,4 +16,4 @@ _Debe seguir los siguientes pasos
 
 3)Abrirlo con el comando npm start que abrirá el proyecto en su puerto local Nº3000 y de esta manera podrá visualizarlo en su navegador.
 
-![AdidasStore](https://github.com/sebasmartinezchas/React_Coder/main/src/AdidasStore.gif)
+![AdidasStore](https://github.com/sebasmartinezchas/React_Coder/blob/main/src/AdidasStore.gif)
