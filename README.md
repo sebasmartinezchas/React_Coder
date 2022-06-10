@@ -10,6 +10,8 @@ _Material Icon: Para incorporar íconos.
 
 ### Instalación y utilización de la aplicación
 _Debe seguir los siguientes pasos
+
+###
 1)Clonar el proyecto en su PC.
 
 2)Inicializarlo con npm install en la consola de su preferencia.
