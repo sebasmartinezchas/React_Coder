@@ -1,0 +1,38 @@
+.button-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+ 
+}
+.button-count{
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #3761af;
+    color: white;
+    border-radius: 15px;
+}
+.button-count:hover{
+    background-color: #6f9772;
+}
+.item-quantity{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.button-add{
+    padding: 1rem 4rem;
+    margin-bottom: 2rem;
+    background-color: #3761af;
+    border-radius: 15px;
+}
+.button-add:hover{
+    background-color: #6f9772;
+
+}
+.text-add{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+}

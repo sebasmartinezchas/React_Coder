@@ -1,6 +1,12 @@
 import React from "react";
+import { useContext } from "react";
+import CartContext from "../../context/CartContext";
+
 
 const CartWidgets = () => {
+  const {totalQuantityInCart}=useContext(CartContext)
+  // const totalQuantityInCart=getQuantityItemInCart;
+  console.log(totalQuantityInCart)
   return (
     <div>
       <a href="/" className="item">
@@ -8,7 +14,7 @@ const CartWidgets = () => {
           <i className="material-icons">shopping_cart</i>
           <div className="detail">
             Carrito
-            <div className="sub">$ 0.0</div>
+            <div className="sub">{totalQuantityInCart}</div>
           </div>
         </div>
       </a>

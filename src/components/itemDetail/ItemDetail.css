@@ -13,9 +13,12 @@
     font-weight: 700;
     font-size: 1.5rem;
     display: inline-block;
-    margin-bottom: 2rem;
- 
- 
+    margin: 2rem 0;
+    padding: 0.2rem 0.5rem;
+
+}
+.product-price:hover{
+    background-color: #09854b;
 }
 .description{
     font-style: italic;
