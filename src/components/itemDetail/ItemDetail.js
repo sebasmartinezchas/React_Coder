@@ -27,11 +27,11 @@ const ItemDetail = ({
   return (
     <>
       <div className="product-detail">
-        <h1>{name}</h1>
+        <h1 className="name-detail">{name}</h1>
         <div>
           <img src={img} alt={name} className="image-detail" />
         </div>
-        <h2>{description}</h2>
+        <h2 className="description-detail">{description}</h2>
         <p className="description">{description2}</p>
         <span className="product-price">
           {priceStr}
@@ -40,7 +40,11 @@ const ItemDetail = ({
         {quantityAddedToCart === 0 ? (
           <ItemCount addToCart={handleCart} stock={stock} />
         ) : (
-          <Link to="/cart">Terminar Compra</Link>
+          <div>
+            <Link to="/cart">
+              <button className="go-to-cart">Terminar Compra</button>
+            </Link>
+          </div>
         )}
       </div>
     </>
