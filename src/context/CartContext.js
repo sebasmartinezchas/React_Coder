@@ -4,7 +4,15 @@ import { useState,useEffect,createContext } from "react"
 export const CartProvider=({children})=>{
     const[cart,setCart]=useState([])
     console.log(cart)  
+    const[totalQuantityInCart,setTotalQuantityInCart]=useState(0)
+    const[totalPurchase,setTotalPurchase]=useState(0)
+useEffect(()=>{
+    updatePurchase()
+},[cart]) //eslint-disable-line
+
+    
     useEffect(()=>{
+        // updatePurchase()
         let totalQuantityInCart=0;
         cart.forEach(product=>{
         totalQuantityInCart+=product.quantity
@@ -13,7 +21,7 @@ export const CartProvider=({children})=>{
          
     },[cart])
     
-    const[totalQuantityInCart,setTotalQuantityInCart]=useState(0)
+
     const addItemToCart=(itemToAdd)=>{
       if(!isItemInCart(itemToAdd.id)){
         setCart([...cart,itemToAdd])
@@ -27,16 +35,19 @@ export const CartProvider=({children})=>{
     const isItemInCart=(id)=>{
         return cart.some(product=>product.id===id)
     }
-    // const getQuantityItemInCart=()=>{
-    //     let totalQuantityInCart=0;
-    //     cart.forEach(product=>{
-    //         totalQuantityInCart+=product.quantity
-    //     })
-    //     return totalQuantityInCart
+    const clearCart=()=>{
+        setCart([])
+    }
+    const updatePurchase=()=>{
+        let total=0;
+        cart.forEach(products=>{
+            total+=products.quantity * products.price
+        })
+        setTotalPurchase(total)
+    }
 
-    // }
     return(
-        <CartContext.Provider value={{cart,addItemToCart,removeItemFromCart,isItemInCart,totalQuantityInCart}}>
+        <CartContext.Provider value={{cart,addItemToCart,removeItemFromCart,isItemInCart,totalQuantityInCart,clearCart,totalPurchase}}>
             {children}
              </CartContext.Provider>
     )

@@ -1,6 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 
 const CartWidgets = () => {
@@ -9,7 +10,7 @@ const CartWidgets = () => {
   console.log(totalQuantityInCart)
   return (
     <div>
-      <a href="/" className="item">
+      <Link to="/cart" className="item">
         <div className="group">
           <i className="material-icons">shopping_cart</i>
           <div className="detail">
@@ -17,7 +18,7 @@ const CartWidgets = () => {
             <div className="sub">{totalQuantityInCart}</div>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };
