@@ -5,21 +5,20 @@ export const CartProvider=({children})=>{
     const[cart,setCart]=useState([])
     console.log(cart)  
     const[totalQuantityInCart,setTotalQuantityInCart]=useState(0)
-    const[totalPurchase,setTotalPurchase]=useState(0)
-useEffect(()=>{
-    updatePurchase()
-},[cart]) //eslint-disable-line
-
-    
-    useEffect(()=>{
-        // updatePurchase()
-        let totalQuantityInCart=0;
-        cart.forEach(product=>{
-        totalQuantityInCart+=product.quantity
-        })
-        setTotalQuantityInCart(totalQuantityInCart)
-         
-    },[cart])
+    const [totalPurchase, setTotalPurchase] = useState(0);
+    useEffect(() => {
+      updatePurchase();
+      updateTotalProductInCart();
+    }, [cart]); //eslint-disable-line
+  
+    const updateTotalProductInCart = () => {
+      let totalQuantityInCart = 0;
+      cart.forEach((product) => {
+        totalQuantityInCart += product.quantity;
+      });
+      setTotalQuantityInCart(totalQuantityInCart);
+    };
+  
     
 
     const addItemToCart=(itemToAdd)=>{

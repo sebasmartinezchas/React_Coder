@@ -1,10 +1,14 @@
 import React from "react";
-import navbar from "../NavBar/navbar.css";
+import { useContext } from "react";
+import navbar from "../NavBar/navbar.css";//eslint-disable-line
 import logo from "../NavBar/logo.png";
 import CartWidgets from "./CartWidgets";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import CartContext from "../../context/CartContext";
 
 const NavBar = () => {
+  const { totalQuantityInCart } = useContext(CartContext);
+
   return (
     <header>
       <nav className="navbar">
@@ -39,7 +43,7 @@ const NavBar = () => {
           </NavLink>
         </div>
 
-        <CartWidgets />
+        {totalQuantityInCart ? <CartWidgets /> : ""}
       </nav>
     </header>
   );
