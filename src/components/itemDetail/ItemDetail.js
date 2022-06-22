@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import "../itemDetail/ItemDetail.css";
 import NotificationContext from "../../notification/Notification";
 
-
 const ItemDetail = ({
   name,
   description2,
@@ -20,10 +19,10 @@ const ItemDetail = ({
 }) => {
   const [quantityAddedToCart, setQuantityAddedToCart] = useState(0);
   const { addItemToCart } = useContext(CartContext);
-  const setNotification=useContext(NotificationContext)
+  const setNotification = useContext(NotificationContext);
 
   const handleCart = (quantity) => {
-    setNotification('success',`Se agregaron ${quantity} ${name}`);
+    setNotification("success", `Se agregaron ${quantity} ${name}`);
     addItemToCart({ name, price, quantity, id });
     setQuantityAddedToCart(quantity);
   };
