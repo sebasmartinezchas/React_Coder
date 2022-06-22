@@ -17,9 +17,10 @@ const ItemDetail = ({
   stock,
   id,
 }) => {
-  const [quantityAddedToCart, setQuantityAddedToCart] = useState(0);
-  const { addItemToCart } = useContext(CartContext);
+  const [quantityAddedToCart, setQuantityAddedToCart] = useState(0); //eslint-disable-line
+  const { addItemToCart,isItemInCart } = useContext(CartContext);
   const setNotification = useContext(NotificationContext);
+  const isItemAdded=isItemInCart(id)
 
   const handleCart = (quantity) => {
     setNotification("success", `Se agregaron ${quantity} ${name}`);
@@ -39,7 +40,7 @@ const ItemDetail = ({
           {priceStr}
           {price}
         </span>
-        {quantityAddedToCart === 0 ? (
+        {!isItemAdded ? (
           <ItemCount addToCart={handleCart} stock={stock} />
         ) : (
           <div>
