@@ -22,7 +22,6 @@ const ItemListContainer = ({ greeting }) => {
       : collection(db, "productList");
     getDocs(collectionRef)
       .then((response) => {
-        console.log(response);
         const productListFormatted = response.docs.map((doc) => {
           return { id: doc.id, ...doc.data() };
         });

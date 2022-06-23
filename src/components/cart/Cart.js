@@ -1,27 +1,24 @@
-
 import React, { useContext } from "react";
 import CartContext from "../../context/CartContext";
 import ItemCart from "../itemCart/ItemCart";
-import './Cart.css'
+import "./Cart.css";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cart,clearCart,totalPurchase,totalQuantityInCart} = useContext(CartContext);
-  console.log(cart);
-  if(!totalQuantityInCart){
-    return(
+  const { cart, clearCart, totalPurchase, totalQuantityInCart } =
+    useContext(CartContext);
+
+  if (!totalQuantityInCart) {
+    return (
       <div>
         <h1>No hay productos en su carrito</h1>
-        <Link to='/'>
+        <Link to="/">
           <button>Conozca nuestros productos</button>
         </Link>
       </div>
-    )
+    );
   }
 
-
-
-  
   return (
     <div>
       <h1>Su Carrito de compras </h1>
@@ -31,8 +28,10 @@ const Cart = () => {
       ))}
       <h2>El total de su compra es:${totalPurchase}</h2>
       <div className="button-cart">
-      <button className="create-order">Crear Orden</button>
-      <button className="remove-order" onClick={clearCart}>Vaciar Carrito</button>
+        <button className="create-order">Crear Orden</button>
+        <button className="remove-order" onClick={clearCart}>
+          Vaciar Carrito
+        </button>
       </div>
     </div>
   );

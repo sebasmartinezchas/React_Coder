@@ -1,5 +1,5 @@
 import React from "react";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import CartContext from "../../context/CartContext";
 import ItemCount from "../itemCount/ItemCount";
@@ -17,15 +17,13 @@ const ItemDetail = ({
   stock,
   id,
 }) => {
-  const [quantityAddedToCart, setQuantityAddedToCart] = useState(0); //eslint-disable-line
-  const { addItemToCart,isItemInCart } = useContext(CartContext);
+  const { addItemToCart, isItemInCart } = useContext(CartContext);
   const setNotification = useContext(NotificationContext);
-  const isItemAdded=isItemInCart(id)
+  const isItemAdded = isItemInCart(id);
 
   const handleCart = (quantity) => {
     setNotification("success", `Se agregaron ${quantity} ${name}`);
     addItemToCart({ name, price, quantity, id });
-    setQuantityAddedToCart(quantity);
   };
   return (
     <>
