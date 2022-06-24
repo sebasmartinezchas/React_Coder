@@ -5,8 +5,9 @@ import ItemList from "../itemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../services/firebase";
+import Spinner from "../spinner/Spinner";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
   const [productList, setProductList] = useState([]);
 
   const [searching, setSearching] = useState(true);
@@ -35,13 +36,15 @@ const ItemListContainer = ({ greeting }) => {
       });
   }, [categoryId]);
   if (searching) {
-    return <h1>Buscando tus productos...</h1>;
+    return (
+      <div className="spinner">
+        <Spinner />
+      </div>
+    );
   }
 
   return (
     <div className="card-container">
-      <h1>{greeting}</h1>
-
       <ItemList productList={productList} />
     </div>
   );

@@ -15,7 +15,6 @@ const ItemDetailContainer = () => {
     const docRef = doc(db, "productList", productId);
     getDoc(docRef)
       .then((doc) => {
-        console.log(doc);
         const productFormatted = { id: doc.id, ...doc.data() };
         setProduct(productFormatted);
       })
@@ -23,7 +22,6 @@ const ItemDetailContainer = () => {
         console.log(error);
       });
   }, [productId]);
-  console.log(product);
 
   return (
     <>
