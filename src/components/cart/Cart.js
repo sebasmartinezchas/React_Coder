@@ -28,7 +28,10 @@ const Cart = () => {
       ))}
       <h2>El total de su compra es:${totalPurchase}</h2>
       <div className="button-cart">
-        <button className="create-order">Crear Orden</button>
+        <Link to='/checkout'>     
+          <button className="checkout">Checkout</button>
+        </Link>
+
         <button className="remove-order" onClick={clearCart}>
           Vaciar Carrito
         </button>

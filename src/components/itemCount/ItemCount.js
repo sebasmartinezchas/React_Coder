@@ -10,7 +10,7 @@ const ItemCount = ({ stock, initial = 0, addToCart }) => {
 
   const deduct = () => {
     if (quantity > 0) setQuantity(quantity - 1);
-    console.log("hice click");
+ 
   };
 
   return (

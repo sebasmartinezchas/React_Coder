@@ -1,0 +1,21 @@
+.form-group{
+    display: flex;
+   flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 300px;
+}
+.create-order{
+    margin-top: 5rem;
+    background-color: #025a15;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    cursor: pointer;
+}

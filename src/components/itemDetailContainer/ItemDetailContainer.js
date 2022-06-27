@@ -10,7 +10,6 @@ const ItemDetailContainer = () => {
   const [product, setProduct] = useState();
   const { productId } = useParams();
 
-  // console.log(params)
   useEffect(() => {
     const docRef = doc(db, "productList", productId);
     getDoc(docRef)
