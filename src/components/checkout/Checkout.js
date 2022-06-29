@@ -14,11 +14,15 @@ import { db } from "../../services/firebase/index";
 import CartContext from "../../context/CartContext";
 import "./Checkout.css";
 import NotificationContext from "../../notification/Notification";
+import Spinner from "../spinner/Spinner";
+
+
 
 const Checkout = () => {
-  const { cart, totalPurchase,clearCart,totalQuantityInCart } = useContext(CartContext);
+  const { cart, totalPurchase, clearCart, totalQuantityInCart } =
+    useContext(CartContext);
   const setNotification = useContext(NotificationContext);
-  const[loading,setLoading]=useState(false)
+  const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     fullname: "",
     email: "",
@@ -35,7 +39,7 @@ const Checkout = () => {
     e.preventDefault();
   };
   const handleCreateOrder = () => {
-    setLoading(true)
+    setLoading(true);
     const objOrder = {
       buyer: data,
       items: cart,
@@ -69,6 +73,7 @@ const Checkout = () => {
       })
       .then(({ id }) => {
         batch.commit();
+        clearCart();
         setNotification(
           "success",
           `Su orden se creo correctamente. El Id de su orden es: ${id}`
@@ -80,20 +85,24 @@ const Checkout = () => {
         } else {
           console.log(error);
         }
-      }).finally(()=>{
-        setLoading(false)
-        clearCart()
       })
+      .finally(() => {
+        setLoading(false);
+      });
   };
-  if(loading){
-    return <h1>Se esta generando su orden</h1>
+  if (loading) {
+    return (
+      <div className="spinner">
+      <Spinner />
+    </div>
+    )
   }
   if (!totalQuantityInCart) {
     return (
       <div>
-        <h1>No hay productos en su carrito pendientes de comprar</h1>
+        <h1 className="cart-empty">No hay productos en su carrito pendientes de comprar</h1>
         <Link to="/">
-          <button>Conozca mas de nuestros productos</button>
+          <button className="button-navigate">Conozca mas de nuestros productos</button>
         </Link>
       </div>
     );

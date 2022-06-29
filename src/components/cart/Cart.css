@@ -25,3 +25,22 @@
     font-weight: 400;
     cursor: pointer;
 }
+.button-navigate{
+    background-color: #3761af;
+    margin-top: 10rem;
+    padding: 2rem 4rem;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+}
+.button-navigate:hover{
+    background-color: #025a15;
+}
+.cart-empty{
+    color: red;
+    opacity: 0.5;
+    margin-top: 3rem;
+}
