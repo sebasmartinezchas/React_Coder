@@ -1,46 +1,53 @@
-.form-group{
-    display: flex;
-   flex-direction: column;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+.create-order {
+  margin-top: 5rem;
+  background-color: #eff3f0;
+  color: rgb(129, 125, 125);
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  margin: 1rem 0;
 }
-input{
-    width: 300px;
+.create-order:hover {
+  background-color: #64a572;
+  color: white;
 }
-.create-order{
-    margin-top: 5rem;
-    background-color: #025a15;
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 15px;
-    font-size: 1.5rem;
-    font-weight: 400;
-    cursor: pointer;
+.button-navigate {
+  background-color: #3761af;
+  margin-top: 10rem;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
 }
-.button-navigate{
-    background-color: #3761af;
-    margin-top: 10rem;
-    padding: 2rem 4rem;
-    color: white;
-    font-size: 1.5rem;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 500;
-    border: none;
+.button-navigate:hover {
+  background-color: #025a15;
 }
-.button-navigate:hover{
-    background-color: #025a15;
+.cart-empty {
+  color: red;
+  opacity: 0.5;
+  margin-top: 3rem;
 }
-.cart-empty{
-    color: red;
-    opacity: 0.5;
-    margin-top: 3rem;
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
-.spinner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-  }
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+form {
+  background-color: #3761af;
+  color: white;
+  padding: 0 4rem;
+  border-radius: 15px;
+}

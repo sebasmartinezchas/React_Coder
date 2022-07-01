@@ -15,33 +15,69 @@ import CartContext from "../../context/CartContext";
 import "./Checkout.css";
 import NotificationContext from "../../notification/Notification";
 import Spinner from "../spinner/Spinner";
-
-
+import FormInput from "../formInput/FormInput";
 
 const Checkout = () => {
   const { cart, totalPurchase, clearCart, totalQuantityInCart } =
     useContext(CartContext);
   const setNotification = useContext(NotificationContext);
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState({
+  const [values, setValues] = useState({
     fullname: "",
     email: "",
     phone: "",
     adress: "",
   });
-  const handleInputChange = (e) => {
-    setData({
-      ...data,
-      [e.target.name]: e.target.value,
-    });
+  const inputs = [
+    {
+      id: 1,
+      name: "fullname",
+      type: "text",
+      placeholder: "Nombre Completo",
+      errorMessage:
+        "Ingrese su nombre sin espacios ni caracteres especiales,minimo de 4 letras y máximo de 30",
+      label: "Nombre",
+      pattern: "^[A-Za-z0-9]{4,30}$",
+      required: true,
+    },
+    {
+      id: 2,
+      name: "email",
+      type: "email",
+      placeholder: "Email",
+      errorMessage: "Ingrese un email válido",
+      label: "Email",
+      required: true,
+    },
+    {
+      id: 3,
+      name: "phone",
+      type: "text",
+      placeholder: "Telefono",
+      errorMessage: "Ingrese su número de telefono",
+      label: "Telefono",
+      required: true,
+    },
+    {
+      id: 4,
+      name: "adress",
+      type: "text",
+      placeholder: "Dirección",
+      errorMessage: "No olvide su dirección",
+      label: "Dirección",
+      required: true,
+    },
+  ];
+  const onChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
   };
-  const sendData = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
   };
   const handleCreateOrder = () => {
     setLoading(true);
     const objOrder = {
-      buyer: data,
+      buyer: values,
       items: cart,
       total: totalPurchase,
     };
@@ -72,6 +108,7 @@ const Checkout = () => {
         }
       })
       .then(({ id }) => {
+        
         batch.commit();
         clearCart();
         setNotification(
@@ -93,78 +130,44 @@ const Checkout = () => {
   if (loading) {
     return (
       <div className="spinner">
-      <Spinner />
-    </div>
-    )
+        <Spinner />
+      </div>
+    );
   }
   if (!totalQuantityInCart) {
     return (
       <div>
-        <h1 className="cart-empty">No hay productos en su carrito pendientes de comprar</h1>
+        <h1 className="cart-empty">
+          No hay productos en su carrito pendientes de comprar
+        </h1>
         <Link to="/">
-          <button className="button-navigate">Conozca mas de nuestros productos</button>
+          <button className="button-navigate">
+            Conozca mas de nuestros productos
+          </button>
         </Link>
       </div>
     );
   }
+
   return (
-    <>
-      <h1> Ingrese sus datos y finalize su orden de compra</h1>
-      <form className="form-group" onSubmit={sendData}>
-        <div>
-          <label htmlFor="fullname">Nombre Completo</label>
-        </div>
-        <input
-          type="text"
-          id="fullname"
-          placeholder="Ingrese su nombre completo"
-          name="fullname"
-          onChange={handleInputChange}
-        />
+    <div className="form-container">
+      <form onClick={handleSubmit}>
+        <h1>Ingrese sus datos</h1>
 
-        <div>
-          <label htmlFor="email">Email</label>
-        </div>
-        <input
-          type="email"
-          placeholder="ingrese su email"
-          id="email"
-          name="email"
-          onChange={handleInputChange}
-        />
+        {inputs.map((input) => (
+          <FormInput
+            key={input.id}
+            {...input}
+            value={values[input.name]}
+            onChange={onChange}
+          />
+        ))}
 
-        <div>
-          <label htmlFor="phone">Telefono</label>
-        </div>
-        <input
-          type="text"
-          id="phone"
-          placeholder="Su teléfono"
-          name="phone"
-          onChange={handleInputChange}
-        />
-
-        <div>
-          <label htmlFor="adress">Dirección</label>
-        </div>
-        <input
-          type="text"
-          placeholder="Ingrese su dirección"
-          id="adress"
-          name="adress"
-          onChange={handleInputChange}
-        />
-        <div>
-          <button
-            className="create-order"
-            type="submit"
-            onClick={handleCreateOrder}
-          >
-            Crear Orden
-          </button>
-        </div>
+        <button  type='submit'className="create-order" onClick={handleCreateOrder}>
+          Crear Orden
+        </button>
       </form>
-    </>
+    </div>
   );
 };
 
