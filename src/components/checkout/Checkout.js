@@ -8,7 +8,7 @@ import {
   query,
   where,
   documentId,
-  doc,
+  doc,//eslint-disable-line
 } from "firebase/firestore";
 import { db } from "../../services/firebase/index";
 import CartContext from "../../context/CartContext";
@@ -28,6 +28,7 @@ const Checkout = () => {
     phone: "",
     adress: "",
   });
+
   const inputs = [
     {
       id: 1,
@@ -108,7 +109,6 @@ const Checkout = () => {
         }
       })
       .then(({ id }) => {
-        
         batch.commit();
         clearCart();
         setNotification(
@@ -153,7 +153,6 @@ const Checkout = () => {
     <div className="form-container">
       <form onClick={handleSubmit}>
         <h1>Ingrese sus datos</h1>
-
         {inputs.map((input) => (
           <FormInput
             key={input.id}
@@ -163,7 +162,7 @@ const Checkout = () => {
           />
         ))}
 
-        <button  type='submit'className="create-order" onClick={handleCreateOrder}>
+        <button className="create-order" onClick={handleCreateOrder}>
           Crear Orden
         </button>
       </form>

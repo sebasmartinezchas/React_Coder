@@ -10,20 +10,22 @@ const ItemCount = ({ stock, initial = 0, addToCart }) => {
 
   const deduct = () => {
     if (quantity > 0) setQuantity(quantity - 1);
- 
   };
 
   return (
     <div>
       <div className="button-group">
-        <button onClick={deduct} className='button-count'>-</button>
+        <button onClick={deduct} className="button-count">
+          -
+        </button>
         <h4 className="item-quantity">{quantity}</h4>
-        <button onClick={addItem} className='button-count'>+</button>
+        <button onClick={addItem} className="button-count">
+          +
+        </button>
       </div>
       <div>
         <button className="button-add" onClick={() => addToCart(quantity)}>
           <span className="text-add">Agregar al carrito</span>
-          
         </button>
       </div>
     </div>

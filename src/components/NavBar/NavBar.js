@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import navbar from "../NavBar/navbar.css";//eslint-disable-line
+import navbar from "../NavBar/navbar.css"; //eslint-disable-line
 import logo from "../NavBar/logo.png";
 import CartWidgets from "./CartWidgets";
 import { NavLink } from "react-router-dom";

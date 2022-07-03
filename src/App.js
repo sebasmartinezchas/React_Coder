@@ -10,7 +10,6 @@ import Cart from "./components/cart/Cart";
 import { NotificationProvider } from "./notification/Notification";
 import Checkout from "./components/checkout/Checkout";
 
-
 function App() {
   return (
     <div className="App">
@@ -29,7 +28,7 @@ function App() {
                 element={<ItemDetailContainer />}
               />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/checkout" element={<Checkout />}/>
+              <Route path="/checkout" element={<Checkout />} />
             </Routes>
           </BrowserRouter>
         </CartProvider>
