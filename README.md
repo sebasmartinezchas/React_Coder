@@ -22,8 +22,7 @@ _Debe seguir los siguientes pasos
 2)Inicializarlo con npm install en la consola de su preferencia.
 
 3)Abrirlo con el comando npm start que abrirá el proyecto en su puerto local Nº3000 y de esta manera podrá visualizarlo en su navegador.
-###
-Variables de entorno
+### Variables de entorno
 _Ver archivo .env.example
 
 ![AdidasStore](https://github.com/sebasmartinezchas/React_Coder/blob/main/src/AdidasStore.gif)
